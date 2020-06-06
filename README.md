@@ -3,7 +3,7 @@
 [![Python Version](https://img.shields.io/badge/python-3.8.2-brightgreen.svg)](https://python.org)
 [![Django Version](https://img.shields.io/badge/django-3.0.7-brightgreen.svg)](https://djangoproject.com)
 
-This is a simple polls app which is taken from django's [official documentation](https://docs.djangoproject.com/en/3.0/intro/tutorial01/).
+This is a simple polls app which has taken from django's [official documentation](https://docs.djangoproject.com/en/3.0/intro/tutorial01/).
 
 ## Running the Project Locally
 
@@ -35,4 +35,4 @@ The project will be available at **127.0.0.1:8000**.
 
 ## License
 
-The source code is free. It is taken from django's [official documentation page](https://docs.djangoproject.com/en/3.0/intro/tutorial01/).
+The source code is free. This has taken from django's [official documentation page](https://docs.djangoproject.com/en/3.0/intro/tutorial01/).

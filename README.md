@@ -1,20 +1,16 @@
-# Django File Upload Tutorial
+# Django Polls App
 
-[![Python Version](https://img.shields.io/badge/python-3.7-brightgreen.svg)](https://python.org)
-[![Django Version](https://img.shields.io/badge/django-2.1-brightgreen.svg)](https://djangoproject.com)
+[![Python Version](https://img.shields.io/badge/python-3.8.2-brightgreen.svg)](https://python.org)
+[![Django Version](https://img.shields.io/badge/django-3.0.7-brightgreen.svg)](https://djangoproject.com)
 
-Code example used in the tutorial series on Django File Upload.
-
-Watch it on YouTube: [Django 2.1 File Upload](https://www.youtube.com/playlist?list=PLLxk3TkuAYnpm24Ma1XenNeq1oxxRcYFT)
-
-Subscribe to my YouTube channel: [youtube.com/VitorFreitas](https://www.youtube.com/VitorFreitas?sub_confirmation=1)
+This is a simple polls app which is taken from django's [official documentation](https://docs.djangoproject.com/en/3.0/intro/tutorial01/).
 
 ## Running the Project Locally
 
 First, clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/sibtc/django-upload-example.git
+git clone https://github.com/shaonsust/poll-app.git
 ```
 
 Install the requirements:
@@ -37,7 +33,6 @@ python manage.py runserver
 
 The project will be available at **127.0.0.1:8000**.
 
-
 ## License
 
-The source code is released under the [MIT License](https://github.com/sibtc/django-upload-example/blob/master/LICENSE).
+The source code is free. It is taken from django's [official documentation page](https://docs.djangoproject.com/en/3.0/intro/tutorial01/).

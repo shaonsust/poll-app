@@ -1,3 +1,7 @@
+"""
+Model Testing
+"""
+
 import datetime
 
 from django.test import TestCase
@@ -9,6 +13,10 @@ from .models import Question
 
 # Create your tests here.
 class QuestionModelTests(TestCase):
+    """
+    Testing Question Model
+    """
+
     def test_was_published_recently_with_future_question(self):
         """
         was_published_recently() will return False if pub_date
@@ -50,6 +58,10 @@ def create_question(question_text, days):
 
 
 class QuestionIndexViewTest(TestCase):
+    """
+    Question index view test.
+    """
+
     def test_no_question(self):
         """
         If no question exist, an appropriate message will return
@@ -112,6 +124,10 @@ class QuestionIndexViewTest(TestCase):
 
 
 class QuestionDetailViewTest(TestCase):
+    """
+    Question details view test
+    """
+
     def test_future_question(self):
         """
         The detail view of a question with publish date in the future will
@@ -137,6 +153,10 @@ class QuestionDetailViewTest(TestCase):
 
 
 class QuestionResultViewTest(TestCase):
+    """
+    Question results view test
+    """
+
     def test_future_question_result(self):
         """
         The result view of question with publish date in the future will

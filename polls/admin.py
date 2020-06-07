@@ -1,14 +1,26 @@
+"""
+Django admin
+"""
+
 from django.contrib import admin
 from .models import Question, Choice
 
 
 class ChoiceInline(admin.TabularInline):
+    """
+    Choice table
+    """
+
     model = Choice
     extra = 0
 
 
 # Creating custom Question admin here.
 class QuestionAdmin(admin.ModelAdmin):
+    """
+    Question Admin area for crud operation.
+    """
+
     fieldsets = [
         (None, {"fields": ["question_text"]}),
         ("Date Information", {"fields": ["pub_date"]}),
@@ -20,6 +32,10 @@ class QuestionAdmin(admin.ModelAdmin):
 
 
 class ChoiceAdmin(admin.ModelAdmin):
+    """
+    Choice Admin area for crud operation.
+    """
+
     fields = ["question", "choice_text", "votes"]
     list_display = ("choice_text", "votes", "question")
     list_filter = ("choice_text", "votes", "question")

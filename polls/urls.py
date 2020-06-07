@@ -1,3 +1,6 @@
+"""
+Polls app's route
+"""
 from django.urls import path
 from . import views
 

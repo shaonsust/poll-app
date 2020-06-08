@@ -8,7 +8,7 @@ from django.utils import timezone
 from .models import Question, Choice
 
 
-class IndexView(generic.ListView):
+class IndexView(generic.ListView):                                                  # pylint: disable=too-many-ancestors
     """This view for index page which will see question list."""
 
     template_name = "polls/index.html"
@@ -16,12 +16,12 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
         """:return the last five published Question"""
-        return Question.objects.filter(pub_date__lte=timezone.now()).order_by(
+        return Question.objects.filter(pub_date__lte=timezone.now()).order_by(      # pylint: disable=no-member
             "-pub_date"
         )[:5]
 
 
-class DetailView(generic.DetailView):
+class DetailView(generic.DetailView):                                               # pylint: disable=too-many-ancestors
     """
     This view for details view
     """
@@ -34,10 +34,10 @@ class DetailView(generic.DetailView):
         Only published question will return, Future question will not return here.
         :return:
         """
-        return Question.objects.filter(pub_date__lte=timezone.now())
+        return Question.objects.filter(pub_date__lte=timezone.now())                # pylint: disable=no-member
 
 
-class ResultsView(generic.DetailView):
+class ResultsView(generic.DetailView):                                              # pylint: disable=too-many-ancestors
     """
     This view is for showing result.
     """
@@ -50,7 +50,7 @@ class ResultsView(generic.DetailView):
         Only published question's result can be seen.
         :return:
         """
-        return Question.objects.filter(pub_date__lte=timezone.now())
+        return Question.objects.filter(pub_date__lte=timezone.now())                 # pylint: disable=no-member
 
 
 def vote(request, question_id):
@@ -64,7 +64,7 @@ def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     try:
         selected_choice = question.choice_set.get(pk=request.POST["choice"])
-    except (KeyError, Choice.DoesNotExist):
+    except (KeyError, Choice.DoesNotExist):                                          # pylint: disable=no-member
         # Redisplay voting form
         return render(
             request,

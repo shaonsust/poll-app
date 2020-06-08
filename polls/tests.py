@@ -54,7 +54,7 @@ def create_question(question_text, days):
     :return:
     """
     pub_date = timezone.now() + datetime.timedelta(days=days)
-    return Question.objects.create(question_text=question_text, pub_date=pub_date)
+    return Question.objects.create(question_text=question_text, pub_date=pub_date)    # pylint: disable=no-member
 
 
 class QuestionIndexViewTest(TestCase):

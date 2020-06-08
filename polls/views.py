@@ -78,3 +78,9 @@ def vote(request, question_id):
         # with post data. This prevents data being posted twice if the
         # user hits the back button
         return HttpResponseRedirect(reverse("polls:results", args=(question.id,)))
+
+
+def view_404(request, exception=None):
+    # make a redirect to homepage
+    # you can use the name of url or just the plain link
+    return HttpResponseRedirect(reverse('polls:index'))

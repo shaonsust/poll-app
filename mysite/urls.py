@@ -22,3 +22,5 @@ urlpatterns = [
     path('^__debug__/', include(debug_toolbar.urls)),
     path('polls/', include('polls.urls'))
 ]
+
+handler404 = 'polls.views.view_404'

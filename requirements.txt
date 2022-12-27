@@ -15,7 +15,7 @@ pathspec==0.8.0
 pip==20.1.1
 pytz==2020.1
 regex==2020.5.14
-setuptools==47.1.1
+setuptools==65.5.1
 six==1.15.0
 sqlparse==0.3.1
 toml==0.10.1
